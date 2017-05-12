@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A31A82B1EC5642700559EDE /* lnk_opener_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A31A82A1EC5642700559EDE /* lnk_opener_icon.png */; };
 		4AFBE36C1EC462E500C6FA81 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AFBE36B1EC462E500C6FA81 /* AppDelegate.m */; };
 		4AFBE36F1EC462E500C6FA81 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AFBE36E1EC462E500C6FA81 /* main.m */; };
 		4AFBE3721EC462E500C6FA81 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AFBE3711EC462E500C6FA81 /* ViewController.m */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A31A82A1EC5642700559EDE /* lnk_opener_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lnk_opener_icon.png; path = "lnk Opener/Assets.xcassets/Image.imageset/lnk_opener_icon.png"; sourceTree = "<group>"; };
 		4AFBE3671EC462E500C6FA81 /* lnk Opener.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "lnk Opener.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AFBE36A1EC462E500C6FA81 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4AFBE36B1EC462E500C6FA81 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -43,6 +45,7 @@
 		4AFBE35E1EC462E500C6FA81 = {
 			isa = PBXGroup;
 			children = (
+				4A31A82A1EC5642700559EDE /* lnk_opener_icon.png */,
 				4AFBE3691EC462E500C6FA81 /* lnk Opener */,
 				4AFBE3681EC462E500C6FA81 /* Products */,
 			);
@@ -141,6 +144,7 @@
 			files = (
 				4AFBE3771EC462E500C6FA81 /* Assets.xcassets in Resources */,
 				4AFBE37A1EC462E500C6FA81 /* Main.storyboard in Resources */,
+				4A31A82B1EC5642700559EDE /* lnk_opener_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +308,7 @@
 				4AFBE3801EC462E500C6FA81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

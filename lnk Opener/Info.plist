@@ -12,7 +12,7 @@
 				<string>lnk</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string></string>
+			<string>lnk_opener_icon</string>
 			<key>CFBundleTypeName</key>
 			<string>DocumentType</string>
 			<key>CFBundleTypeOSTypes</key>
@@ -20,7 +20,9 @@
 				<string>????</string>
 			</array>
 			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
+			<string>Viewer</string>
+			<key>LSTypeIsPackage</key>
+			<integer>0</integer>
 			<key>NSDocumentClass</key>
 			<string>Document</string>
 		</dict>

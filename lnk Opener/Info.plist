@@ -13,8 +13,12 @@
 			</array>
 			<key>CFBundleTypeIconFile</key>
 			<string>lnk_opener_icon</string>
+			<key>CFBundleTypeMIMETypes</key>
+			<array>
+				<string>application/x-ms-shortcut</string>
+			</array>
 			<key>CFBundleTypeName</key>
-			<string>DocumentType</string>
+			<string>Windows Shortcut File</string>
 			<key>CFBundleTypeOSTypes</key>
 			<array>
 				<string>????</string>

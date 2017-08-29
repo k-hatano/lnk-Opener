@@ -18,6 +18,8 @@
 
 /* Begin PBXFileReference section */
 		4A31A82A1EC5642700559EDE /* lnk_opener_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lnk_opener_icon.png; path = "lnk Opener/Assets.xcassets/Image.imageset/lnk_opener_icon.png"; sourceTree = "<group>"; };
+		4AABC9E11F5432CA00E46AF7 /* liblnk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = liblnk.xcodeproj; path = liblnk/liblnk.xcodeproj; sourceTree = "<group>"; };
+		4AF206931F557910001A390E /* lnkinfo */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = lnkinfo; path = liblnk/lnktools/lnkinfo; sourceTree = "<group>"; };
 		4AFBE3671EC462E500C6FA81 /* lnk Opener.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "lnk Opener.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AFBE36A1EC462E500C6FA81 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4AFBE36B1EC462E500C6FA81 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -42,10 +44,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4AABC9E21F5432CA00E46AF7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		4AFBE35E1EC462E500C6FA81 = {
 			isa = PBXGroup;
 			children = (
+				4AF206931F557910001A390E /* lnkinfo */,
 				4A31A82A1EC5642700559EDE /* lnk_opener_icon.png */,
+				4AABC9E11F5432CA00E46AF7 /* liblnk.xcodeproj */,
 				4AFBE3691EC462E500C6FA81 /* lnk Opener */,
 				4AFBE3681EC462E500C6FA81 /* Products */,
 			);
@@ -130,6 +141,12 @@
 			mainGroup = 4AFBE35E1EC462E500C6FA81;
 			productRefGroup = 4AFBE3681EC462E500C6FA81 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 4AABC9E21F5432CA00E46AF7 /* Products */;
+					ProjectRef = 4AABC9E11F5432CA00E46AF7 /* liblnk.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				4AFBE3661EC462E500C6FA81 /* lnk Opener */,
@@ -270,8 +287,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				HEADER_SEARCH_PATHS = "liblnk/**";
 				INFOPLIST_FILE = "lnk Opener/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = "liblnk/**";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.nita.lnk-Opener";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -282,8 +301,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				HEADER_SEARCH_PATHS = "liblnk/**";
 				INFOPLIST_FILE = "lnk Opener/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = "liblnk/**";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.nita.lnk-Opener";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

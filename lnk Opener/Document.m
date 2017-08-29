@@ -7,6 +7,9 @@
 //
 
 #import "Document.h"
+#import "ViewController.h"
+
+#define STRING_LENGTH 256
 
 @interface Document ()
 
@@ -41,11 +44,42 @@
 }
 
 
-- (BOOL)readFromData:(NSData *)data ofType:(NSString *)typeName error:(NSError **)outError {
-    // Insert code here to read your document from the given data of the specified type. If outError != NULL, ensure that you create and set an appropriate error when returning NO.
-    // You can also choose to override -readFromFileWrapper:ofType:error: or -readFromURL:ofType:error: instead.
-    // If you override either of these, you should also override -isEntireFileLoaded to return NO if the contents are lazily loaded.
-    // [NSException raise:@"UnimplementedMethod" format:@"%@ is unimplemented", NSStringFromSelector(_cmd)];
+- (BOOL)readFromURL:(NSURL *)url
+             ofType:(NSString *)typeName
+              error:(NSError * _Nullable *)outError {
+    NSString *fullPath = [url path];
+    
+    NSTask *task = [[NSTask alloc] init];
+    task.launchPath = @"/usr/local/bin/lnkinfo";
+    task.arguments = [NSArray arrayWithObjects:fullPath, nil];
+    
+    NSPipe *outPipe = [NSPipe pipe];
+    task.standardOutput = outPipe;
+    
+    [task launch];
+    
+    NSData *data = [[outPipe fileHandleForReading] readDataToEndOfFile];
+    NSString *strOut = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSLog(@"%@", strOut);
+    
+    NSRange localPathRange = [strOut rangeOfString:@"	Local path			: "];
+    self.localPath = @"";
+    if (localPathRange.length > 0) {
+        NSRange lineRange = [strOut lineRangeForRange:localPathRange];
+        NSString *tmpLocalPath = [strOut substringWithRange:lineRange];
+        self.localPath = [tmpLocalPath stringByReplacingOccurrencesOfString:@"	Local path			: "
+                                                            withString:@""];
+    }
+    
+    NSRange networkPathRange = [strOut rangeOfString:@"	Network path			: "];
+    self.networkPath = @"";
+    if (networkPathRange.length > 0) {
+        NSRange lineRange = [strOut lineRangeForRange:networkPathRange];
+        NSString *tmpNetworkPath = [strOut substringWithRange:lineRange];
+        self.networkPath = [tmpNetworkPath stringByReplacingOccurrencesOfString:@"	Network path			: "
+                                                                withString:@""];
+    }
+    
     return YES;
 }
 

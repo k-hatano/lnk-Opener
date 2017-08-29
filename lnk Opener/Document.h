@@ -10,6 +10,9 @@
 
 @interface Document : NSDocument
 
+@property (atomic, strong) NSString *fileName;
+@property (atomic, strong) NSString *localPath;
+@property (atomic, strong) NSString *networkPath;
 
 @end
 

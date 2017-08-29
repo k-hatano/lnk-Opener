@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "Document.h"
 
 @implementation ViewController
 
@@ -16,11 +17,16 @@
     // Do any additional setup after loading the view.
 }
 
+- (void)viewDidAppear {
+    Document *document = (Document *)(self.view.window.windowController.document);
+    self.tf_fileName.stringValue = [document.fileName lastPathComponent];
+    self.tf_localPath.stringValue = document.localPath;
+    self.tf_networkPath.stringValue = document.networkPath;
+}
 
 - (void)setRepresentedObject:(id)representedObject {
     [super setRepresentedObject:representedObject];
 
-    // Update the view, if already loaded.
 }
 
 

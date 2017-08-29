@@ -10,6 +10,9 @@
 
 @interface ViewController : NSViewController
 
+@property (nonatomic, weak) IBOutlet NSTextField *tf_fileName;
+@property (nonatomic, weak) IBOutlet NSTextField *tf_localPath;
+@property (nonatomic, weak) IBOutlet NSTextField *tf_networkPath;
 
 @end
 

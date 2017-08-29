@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "838C79908F66D122B61141211A1AFA68A6305274",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "838C79908F66D122B61141211A1AFA68A6305274" : 9223372036854775807,
+    "F5DE61CC064336A39B967D392ADB39843C00A10A" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5F939D02-EDD9-40D2-8EAC-3500AE58597F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "838C79908F66D122B61141211A1AFA68A6305274" : "lnk-Opener\/",
+    "F5DE61CC064336A39B967D392ADB39843C00A10A" : "lnk-Opener\/liblnk\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "lnk Opener",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "lnk Opener.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/k-hatano\/lnk-Opener.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "838C79908F66D122B61141211A1AFA68A6305274"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/libyal\/liblnk.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F5DE61CC064336A39B967D392ADB39843C00A10A"
+    }
+  ]
+}

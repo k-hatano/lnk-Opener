@@ -44,7 +44,7 @@
         return;
     }
     
-    NSString *url = [[[[networkPath lowercaseString] stringByReplacingOccurrencesOfString:@"\\\\" withString:@"smb://"] stringByReplacingOccurrencesOfString:@"\\" withString:@"/"] stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+    NSString *url = [[[[[networkPath lowercaseString] stringByReplacingOccurrencesOfString:@"\\\\" withString:@"smb://"] stringByReplacingOccurrencesOfString:@"\\" withString:@"/"] stringByReplacingOccurrencesOfString:@"\n" withString:@""] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:url]];
 }
 

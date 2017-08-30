@@ -13,6 +13,8 @@
 @property (atomic, strong) NSString *fileName;
 @property (atomic, strong) NSString *localPath;
 @property (atomic, strong) NSString *networkPath;
+@property (atomic, strong) NSString *relativePath;
+@property (atomic, strong) NSString *output;
 
 @end
 

@@ -13,6 +13,12 @@
 @property (nonatomic, weak) IBOutlet NSTextField *tf_fileName;
 @property (nonatomic, weak) IBOutlet NSTextField *tf_localPath;
 @property (nonatomic, weak) IBOutlet NSTextField *tf_networkPath;
+@property (nonatomic, weak) IBOutlet NSTextField *tf_relativePath;
+@property (nonatomic, weak) IBOutlet NSTextView *tv_output;
+
+@property (nonatomic, weak) IBOutlet NSButton *bt_goToNetworkPath;
+
+- (IBAction)networkPathClicked:(id)sender;
 
 @end
 

@@ -51,7 +51,7 @@
     
     NSTask *task = [[NSTask alloc] init];
     task.launchPath = @"/usr/local/bin/lnkinfo";
-    task.arguments = [NSArray arrayWithObjects:fullPath, nil];
+    task.arguments = [NSArray arrayWithObjects:@"-c", @"windows932", fullPath, nil];
     
     NSPipe *outPipe = [NSPipe pipe];
     task.standardOutput = outPipe;
@@ -79,6 +79,17 @@
         self.networkPath = [tmpNetworkPath stringByReplacingOccurrencesOfString:@"	Network path			: "
                                                                 withString:@""];
     }
+    
+    NSRange relativePathRange = [strOut rangeOfString:@"	Relative path			: "];
+    self.relativePath = @"";
+    if (relativePathRange.length > 0) {
+        NSRange lineRange = [strOut lineRangeForRange:relativePathRange];
+        NSString *tmpRelativePath = [strOut substringWithRange:lineRange];
+        self.relativePath = [tmpRelativePath stringByReplacingOccurrencesOfString:@"	Relative path			: "
+                                                                     withString:@""];
+    }
+    
+    self.output = strOut;
     
     return YES;
 }
